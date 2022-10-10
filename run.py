@@ -34,4 +34,5 @@ ax2.set_xlabel("freq (Hz)")
 ax1.grid()
 ax2.grid()
 
+plt.tight_layout()
 plt.show()
