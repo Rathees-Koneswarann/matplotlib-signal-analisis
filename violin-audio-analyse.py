@@ -27,3 +27,8 @@ print('Number of samples in the audio is {}'.format(num_of_samples))
 # get the duration
 duration = num_of_samples/sample_rate
 print('Sound clip is {} seconds long'.format(duration))
+
+
+#plot the clip
+plt.plot(signal)
+plt.show()
