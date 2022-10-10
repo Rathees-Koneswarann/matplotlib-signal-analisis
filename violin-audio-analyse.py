@@ -4,7 +4,7 @@ import wave
 import sys
 
 
-#import audio file
+# import audio file
 raw = wave.open("violin-C4.wav", "r")
 
 # Extract Raw Audio from Wav File
@@ -16,10 +16,14 @@ if raw.getnchannels() == 2:
     print("Just mono files")
     sys.exit(0)
 
-#get the frame rate
+# get the frame rate
 sample_rate = raw.getframerate()
 print('Sample rate of the audio is {}'.format(sample_rate))
 
-#get the number of samples
-num_of_samples = len(signal)
+# get the number of samples
+num_of_samples = raw.getnframes()
 print('Number of samples in the audio is {}'.format(num_of_samples))
+
+# get the duration
+duration = num_of_samples/sample_rate
+print('Sound clip is {} seconds long'.format(duration))
