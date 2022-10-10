@@ -14,7 +14,7 @@ t = np.linspace(0, (N-1)*tstep, N) # time steps
 fstep = Fs/N # freq interval
 f= np.linspace(0, (N-1)*fstep, N) # freq steps
 
-y = 1*np.sin(2*np.pi*f0*t)
+y = 1*np.sin(2*np.pi*f0*t) + 5*np.sin(2*np.pi*3*f0*t)
 
 # perform fft
 x = np.fft.fft(y)
