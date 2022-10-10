@@ -8,7 +8,7 @@ Fs = 2000 # sampling freq
 tstep = 1/Fs # sample time interval
 f0 = 100 # signal freq
 
-N = Fs//f0 # number of samples
+N = 10*Fs//f0 # number of samples
 
 t = np.linspace(0, (N-1)*tstep, N) # time steps
 fstep = Fs/N # freq interval
@@ -20,9 +20,13 @@ y = 1*np.sin(2*np.pi*f0*t)
 x = np.fft.fft(y)
 x_mag = np.abs(x) / N
 
+f_plot = f[0:int(N/2+1)]
+x_mag_plot = 2*x_mag[0:int(N/2+1)]
+x_mag_plot[0] = x_mag_plot[0]/2 # Note: DC component does not need to multiply by tow
+
 
 #plot
 fig, [ax1, ax2] = plt.subplots(nrows=2, ncols=1)
 ax1.plot(t,y, '.-')
-ax2.plot(f,x_mag, '.-')
+ax2.plot(f_plot,x_mag_plot, '.-')
 plt.show()
