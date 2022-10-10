@@ -19,3 +19,7 @@ if raw.getnchannels() == 2:
 #get the frame rate
 sample_rate = raw.getframerate()
 print('Sample rate of the audio is {}'.format(sample_rate))
+
+#get the number of samples
+num_of_samples = len(signal)
+print('Number of samples in the audio is {}'.format(num_of_samples))
