@@ -29,4 +29,7 @@ x_mag_plot[0] = x_mag_plot[0]/2 # Note: DC component does not need to multiply b
 fig, [ax1, ax2] = plt.subplots(nrows=2, ncols=1)
 ax1.plot(t,y, '.-')
 ax2.plot(f_plot,x_mag_plot, '.-')
+ax1.set_xlabel("time (s)")
+ax2.set_xlabel("freq (Hz)")
+
 plt.show()
