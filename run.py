@@ -31,5 +31,7 @@ ax1.plot(t,y, '.-')
 ax2.plot(f_plot,x_mag_plot, '.-')
 ax1.set_xlabel("time (s)")
 ax2.set_xlabel("freq (Hz)")
+ax1.grid()
+ax2.grid()
 
 plt.show()
