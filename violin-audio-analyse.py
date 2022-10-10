@@ -15,3 +15,7 @@ signal = np.frombuffer(signal, dtype=int)
 if raw.getnchannels() == 2:
     print("Just mono files")
     sys.exit(0)
+
+#get the frame rate
+sample_rate = raw.getframerate()
+print('Sample rate of the audio is {}'.format(sample_rate))
