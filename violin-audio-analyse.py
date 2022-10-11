@@ -33,8 +33,16 @@ t = np.array(range(0, len(signal)))/sample_rate
 
 
 #plot the clip
-plt.plot(t, signal)
+#plt.plot(t, signal)
 #plot the small part
-#plt.plot(t[500:750],signal[500:750])
-plt.show()
+#plt.plot(t[0:750],signal[500:750])
+#plt.show()
 
+#fourier transform
+y = np.fft.fft(signal)
+print(type(y))
+print(len(y))
+print(y[0:10])
+
+plt.plot(np.abs(y))
+plt.show()
