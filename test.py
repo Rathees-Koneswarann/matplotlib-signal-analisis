@@ -11,7 +11,7 @@ fr = np.array(range(0,66151))/3
 
 
 plt.figure(figsize=(20,5))
-condition = (fr >259) & (fr < 270)
+condition = (fr >1555) & (fr < 1565)
 plt.plot(fr[condition],np.angle(c[condition]))
 plt.xlabel('Frequency (Hz)')
 plt.ylabel('Phase')
