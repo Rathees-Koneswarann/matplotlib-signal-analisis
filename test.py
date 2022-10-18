@@ -9,9 +9,10 @@ t = np.array(range(0, len(x)))/sr
 c = np.fft.fft(x)
 fr = np.array(range(0,66151))/3
 
-fig, ax = plt.subplots(figsize=(20,8))
-condition = (fr >0) & (fr < 1800)
-plt.plot(fr[condition],np.abs(c[condition]))
+
+plt.figure(figsize=(20,5))
+condition = (fr >259) & (fr < 270)
+plt.plot(fr[condition],np.angle(c[condition]))
 plt.xlabel('Frequency (Hz)')
-plt.ylabel('Amblitude')
+plt.ylabel('Phase')
 plt.show()
